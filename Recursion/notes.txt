@@ -1,0 +1,16 @@
+What is Recursion?
+Do repeat the things
+how=> Fn call itself
+to solve Recursion Problem
+1.Identify tha small problrm first
+2.put in it a cycle(Recursion)
+3.Identify the processing logic
+4.stop the Recursion by applying the termination caseor basecase
+5.Stack(Build)+(Fall)
+6.Code
+
+Note:-Always Create a call Stack Identify the Stack Build and Stack Fall.
+==============================================================================
+Types of Recursion
+-Single Branch
+-Multi Branch 
