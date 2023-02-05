@@ -1,24 +1,21 @@
-package Recursion;
-
 public class AdjacentStars {
-    static String output="";
-    static void adj(String str, int i){
-        output = output+str.charAt(i);
+    static   String NewStr = "";
+    static void stars(String str,int i){
+        NewStr +=str.charAt(i);
         if(i==str.length()-1){
-            return ;
+            return;
         }
-
-        if(str.charAt(i)==str.charAt(i+1))
-        {
-         output += "*";
+        if(str.charAt(i)==str.charAt(i+1)){
+        NewStr+="*";
         }
-        adj(str,i+1);
+        stars(str, i+1);
+        
+       
     }
-
     public static void main(String[] args) {
-        String str = "abbabaab";
-        adj(str, 0);
+        String str = "abbbabaab";
         System.out.println(str);
-        System.out.println(output);
+        stars(str, 0);
+        System.out.println(NewStr);
     }
 }

@@ -1,16 +1,12 @@
-package Recursion;
-
 public class Factorial {
-    static void fact(int num, int result) {
-        // termination point
-        if (num == 0) {
-            System.out.println(result);
-            return;
+    static int fact(int n) {
+        if (n == 0) {
+            return 1;
         }
-        fact(num - 1, result * num);
+        return fact(n - 1) * n;
     }
 
     public static void main(String[] args) {
-        fact(5, 1);
+        System.out.println(fact(5));
     }
 }

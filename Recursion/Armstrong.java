@@ -1,22 +1,20 @@
-package Recursion;
-
 public class Armstrong {
-    static boolean isArmstrong(int org, int compute, int copy) {
-        if (org == 0) {
-            if (compute == copy) {
-                return true;
-            }
-            return false;
+
+    static boolean isArmstrong(int num,int result,int temp){
+       if(num==0){
+        if(result==temp){
+            return true;
         }
-        int rem = org % 10;
-        compute = compute + (rem * rem * rem);
-        return isArmstrong(org / 10, compute, copy);
-
-    }
-
+        return false;
+       }
+        int rem = num%10;
+        result=result+(rem*rem*rem);     
+        return isArmstrong(num/10, result,temp);
+    
+}
     public static void main(String[] args) {
-        int num = 153;
-        boolean result = isArmstrong(num, 0, num);
-        System.out.println(result ? "Armstrong" : "Not Armstrong");
+        boolean ans=(isArmstrong(153, 0,153)) ;
+        System.out.println(ans);
     }
+
 }

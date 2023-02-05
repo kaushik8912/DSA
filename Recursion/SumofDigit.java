@@ -1,19 +1,13 @@
-package Recursion;
-
-public class SumofDigit {
-    static void sum(int n, int sum) {
-        if (n != 0) {
-
-            return;
+class SumofDigit{
+    static int sum(int n,int sum){
+        if(n==0){
+            return 0;
         }
-        int r = n % 10;
-        sum(n / 10, sum = sum + r);
-        System.out.println(sum);
+        int rem = n %10;          
+        return sum(n/10, sum)+rem;
     }
-
+    
     public static void main(String[] args) {
-        sum(12345, 0);
-
+        System.out.println("Sum is : "+sum(12345, 0));
     }
-
 }

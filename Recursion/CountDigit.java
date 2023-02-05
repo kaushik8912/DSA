@@ -1,5 +1,3 @@
-package Recursion;
-
 public class CountDigit {
     static void countDigit(int num, int count) {
         if (num == 0) {
@@ -10,6 +8,6 @@ public class CountDigit {
     }
 
     public static void main(String[] args) {
-        countDigit(78543, 0);
+        countDigit(9765132, 0);
     }
 }

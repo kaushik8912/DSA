@@ -1,20 +1,12 @@
-package Recursion;
-
 public class FibSeries {
-    static int fib(int n) {
-        int result = 0;
-        int first = 0;
-        int second = 1; 
-        for (int i = 1; i <= n; i++) {
-            result = first + second;
-            first = second;
-            second = result;
+    static int fib(int n){
+        if(n<=1){
+            return n;
         }
-        return result;
+        return fib(n-1)+fib(n-2);
     }
-
     public static void main(String[] args) {
         System.out.println(fib(6));
-
+        
     }
 }

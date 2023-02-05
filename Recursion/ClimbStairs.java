@@ -1,21 +1,17 @@
-package Recursion;
-
-public class ClimbStairs {
-    static int climbStairs(int n){
-        if(n==1||n==0){
+class ClimbStairs{
+    static int climbStairs(int num){
+        if( num ==1){
             return 1;
         }
-        else if(n==2){
+        if(num==2){
             return 2;
         }
-        else{
-            int x = climbStairs(n - 2);
-            int y = climbStairs(n - 1);
-            return x + y;
-        }
+       int x=climbStairs(num-2);
+       int y =climbStairs(num-1);
+       return x+y;
+       
     }
-
     public static void main(String[] args) {
-        System.out.println(climbStairs(4)); 
+        System.out.println(climbStairs(3));
     }
 }
